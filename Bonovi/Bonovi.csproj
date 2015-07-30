@@ -1,0 +1,410 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{946D072A-5145-461C-A286-568D60054B26}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Bonovi</RootNamespace>
+    <AssemblyName>Bonovi</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Letter_B_Icon_128.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ADODB, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Advantage.Data.Provider, Version=8.10.2.38, Culture=neutral, PublicKeyToken=e33137c86a38dc06, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Extended Systems\Advantage 8.1\ado.net\2.0\Advantage.Data.Provider.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Data.v10.1, Version=10.1.5.0, Culture=neutral, PublicKeyToken=940cfcde86f32efd" />
+    <Reference Include="DevExpress.Utils.v10.1, Version=10.1.5.0, Culture=neutral, PublicKeyToken=940cfcde86f32efd" />
+    <Reference Include="DevExpress.XtraEditors.v10.1, Version=10.1.5.0, Culture=neutral, PublicKeyToken=940cfcde86f32efd, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v10.1, Version=10.1.5.0, Culture=neutral, PublicKeyToken=940cfcde86f32efd, processorArchitecture=MSIL" />
+    <Reference Include="FastReport, Version=1.4.19.0, Culture=neutral, PublicKeyToken=2af612e6bbbcb6be" />
+    <Reference Include="FastReport.Bars, Version=1.4.19.0, Culture=neutral, PublicKeyToken=2af612e6bbbcb6be" />
+    <Reference Include="FastReport.Editor, Version=1.4.19.0, Culture=neutral, PublicKeyToken=2af612e6bbbcb6be" />
+    <Reference Include="FastReport.MySQL">
+      <HintPath>D:\Csharp\FastReport NET\connections\FastReport.MySQL\obj\Debug\FastReport.MySQL.dll</HintPath>
+    </Reference>
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="MySql.Data, Version=6.3.5.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>C:\Program Files (x86)\MySQL\MySQL Connector Net 6.5.4\Assemblies\v4.0\MySql.Data.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Arhiva.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Arhiva.Designer.cs">
+      <DependentUpon>Arhiva.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Arhiva1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Arhiva.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Azuriraj stavke fakture.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Azuriraj stavke fakture.Designer.cs">
+      <DependentUpon>Azuriraj stavke fakture.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DohvatiIDSifra.cs" />
+    <Compile Include="Fakturirani bonovi.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Fakturirani bonovi.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Fakturiranje.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fakturiranje.Designer.cs">
+      <DependentUpon>Fakturiranje.cs</DependentUpon>
+    </Compile>
+    <Compile Include="faturiranje.cs">
+      <DependentUpon>faturiranje.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="faturiranje.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>faturiranje.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Global.cs" />
+    <Compile Include="Ispis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ispis.Designer.cs">
+      <DependentUpon>Ispis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Izdani bonovi.cs">
+      <DependentUpon>Izdani bonovi.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Izdani bonovi.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Izdani bonovi.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Napravi fakturu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Napravi fakturu.Designer.cs">
+      <DependentUpon>Napravi fakturu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Novi bonovi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Novi bonovi.Designer.cs">
+      <DependentUpon>Novi bonovi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Operater.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Operater.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Partner.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Partner.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Podaci.cs" />
+    <Compile Include="Pregled fakturirani.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pregled fakturirani.Designer.cs">
+      <DependentUpon>Pregled fakturirani.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pregled iskoristenih.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pregled iskoristenih.Designer.cs">
+      <DependentUpon>Pregled iskoristenih.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pregled izdanih.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pregled izdanih.Designer.cs">
+      <DependentUpon>Pregled izdanih.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Prenesi stare.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Prenesi stare.Designer.cs">
+      <DependentUpon>Prenesi stare.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Preuzmi arhivu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Preuzmi arhivu.Designer.cs">
+      <DependentUpon>Preuzmi arhivu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PrijenosIFA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrijenosIFA.Designer.cs">
+      <DependentUpon>PrijenosIFA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StavkeBona.cs">
+      <DependentUpon>StavkeBona.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="StavkeBona.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StavkeBona.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Upiti.cs" />
+    <Compile Include="zaPrijenosBonova.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>zaPrijenosBonova.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="zaPrijenosIFA1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>zaPrijenosIFA.xsd</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Arhiva.resx">
+      <DependentUpon>Arhiva.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Azuriraj stavke fakture.resx">
+      <DependentUpon>Azuriraj stavke fakture.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fakturiranje.resx">
+      <DependentUpon>Fakturiranje.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ispis.resx">
+      <DependentUpon>Ispis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Napravi fakturu.resx">
+      <DependentUpon>Napravi fakturu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Novi bonovi.resx">
+      <DependentUpon>Novi bonovi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pregled fakturirani.resx">
+      <DependentUpon>Pregled fakturirani.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pregled iskoristenih.resx">
+      <DependentUpon>Pregled iskoristenih.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pregled izdanih.resx">
+      <DependentUpon>Pregled izdanih.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Prenesi stare.resx">
+      <DependentUpon>Prenesi stare.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Preuzmi arhivu.resx">
+      <DependentUpon>Preuzmi arhivu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrijenosIFA.resx">
+      <DependentUpon>PrijenosIFA.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Arhiva.xsc">
+      <DependentUpon>Arhiva.xsd</DependentUpon>
+    </None>
+    <None Include="Arhiva.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Arhiva1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Arhiva.xss">
+      <DependentUpon>Arhiva.xsd</DependentUpon>
+    </None>
+    <None Include="Fakturirani bonovi.xsc">
+      <DependentUpon>Fakturirani bonovi.xsd</DependentUpon>
+    </None>
+    <None Include="Fakturirani bonovi.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Fakturirani bonovi.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Fakturirani bonovi.xss">
+      <DependentUpon>Fakturirani bonovi.xsd</DependentUpon>
+    </None>
+    <None Include="faturiranje.xsc">
+      <DependentUpon>faturiranje.xsd</DependentUpon>
+    </None>
+    <None Include="faturiranje.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>faturiranje.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="faturiranje.xss">
+      <DependentUpon>faturiranje.xsd</DependentUpon>
+    </None>
+    <None Include="Izdani bonovi.xsc">
+      <DependentUpon>Izdani bonovi.xsd</DependentUpon>
+    </None>
+    <None Include="Izdani bonovi.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Izdani bonovi.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Izdani bonovi.xss">
+      <DependentUpon>Izdani bonovi.xsd</DependentUpon>
+    </None>
+    <None Include="Operater.xsc">
+      <DependentUpon>Operater.xsd</DependentUpon>
+    </None>
+    <None Include="Operater.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Operater.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Operater.xss">
+      <DependentUpon>Operater.xsd</DependentUpon>
+    </None>
+    <None Include="Partner.xsc">
+      <DependentUpon>Partner.xsd</DependentUpon>
+    </None>
+    <None Include="Partner.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Partner.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Partner.xss">
+      <DependentUpon>Partner.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="StavkeBona.xsc">
+      <DependentUpon>StavkeBona.xsd</DependentUpon>
+    </None>
+    <None Include="StavkeBona.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>StavkeBona.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="StavkeBona.xss">
+      <DependentUpon>StavkeBona.xsd</DependentUpon>
+    </None>
+    <None Include="zaPrijenosBonova.xsc">
+      <DependentUpon>zaPrijenosBonova.xsd</DependentUpon>
+    </None>
+    <None Include="zaPrijenosBonova.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>zaPrijenosBonova.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="zaPrijenosBonova.xss">
+      <DependentUpon>zaPrijenosBonova.xsd</DependentUpon>
+    </None>
+    <None Include="zaPrijenosIFA.xsc">
+      <DependentUpon>zaPrijenosIFA.xsd</DependentUpon>
+    </None>
+    <None Include="zaPrijenosIFA.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>zaPrijenosIFA1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="zaPrijenosIFA.xss">
+      <DependentUpon>zaPrijenosIFA.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Letter_B_Icon_128.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

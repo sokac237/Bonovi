@@ -1,0 +1,38 @@
+c:\users\ivans\documents\visual studio 2010\Projects\Bonovi\Bonovi\bin\Debug\Bonovi.exe
+c:\users\ivans\documents\visual studio 2010\Projects\Bonovi\Bonovi\bin\Debug\Bonovi.pdb
+c:\users\ivans\documents\visual studio 2010\Projects\Bonovi\Bonovi\obj\x86\Debug\ResolveAssemblyReference.cache
+c:\users\ivans\documents\visual studio 2010\Projects\Bonovi\Bonovi\obj\x86\Debug\Bonovi.frmMain.resources
+c:\users\ivans\documents\visual studio 2010\Projects\Bonovi\Bonovi\obj\x86\Debug\Bonovi.Properties.Resources.resources
+c:\users\ivans\documents\visual studio 2010\Projects\Bonovi\Bonovi\obj\x86\Debug\GenerateResource.read.1.tlog
+c:\users\ivans\documents\visual studio 2010\Projects\Bonovi\Bonovi\obj\x86\Debug\GenerateResource.write.1.tlog
+c:\users\ivans\documents\visual studio 2010\Projects\Bonovi\Bonovi\obj\x86\Debug\Bonovi.exe
+c:\users\ivans\documents\visual studio 2010\Projects\Bonovi\Bonovi\obj\x86\Debug\Bonovi.pdb
+c:\users\ivans\documents\visual studio 2010\Projects\Bonovi\Bonovi\obj\x86\Debug\Bonovi.frmLogin.resources
+C:\Users\IvanS\Documents\Visual Studio 2010\Projects\Bonovi\Bonovi\obj\x86\Debug\Bonovi.frmNoviBon.resources
+C:\Users\IvanS\Documents\Visual Studio 2010\Projects\Bonovi\Bonovi\obj\x86\Debug\Bonovi.exe.licenses
+C:\Users\IvanS\Documents\Visual Studio 2010\Projects\Bonovi\Bonovi\bin\Debug\Bonovi.exe.config
+H:\Bonovi\Bonovi\bin\Debug\Bonovi.exe.config
+H:\Bonovi\Bonovi\bin\Debug\Bonovi.exe
+H:\Bonovi\Bonovi\bin\Debug\Bonovi.pdb
+H:\Bonovi\Bonovi\bin\Debug\FastReport.MySQL.dll
+H:\Bonovi\Bonovi\bin\Debug\FastReport.MySQL.pdb
+H:\Bonovi\Bonovi\obj\x86\Debug\Bonovi.csprojResolveAssemblyReference.cache
+H:\Bonovi\Bonovi\obj\x86\Debug\Bonovi.frmArhiva.resources
+H:\Bonovi\Bonovi\obj\x86\Debug\Bonovi.frmAzurirajStavkeFakture.resources
+H:\Bonovi\Bonovi\obj\x86\Debug\Bonovi.frmFakturiranje.resources
+H:\Bonovi\Bonovi\obj\x86\Debug\Bonovi.frmIspis.resources
+H:\Bonovi\Bonovi\obj\x86\Debug\Bonovi.frmLogin.resources
+H:\Bonovi\Bonovi\obj\x86\Debug\Bonovi.frmMain.resources
+H:\Bonovi\Bonovi\obj\x86\Debug\Bonovi.frmNapraviFakturu.resources
+H:\Bonovi\Bonovi\obj\x86\Debug\Bonovi.frmNoviBon.resources
+H:\Bonovi\Bonovi\obj\x86\Debug\Bonovi.frmFakturirani.resources
+H:\Bonovi\Bonovi\obj\x86\Debug\Bonovi.frmIskoristeni.resources
+H:\Bonovi\Bonovi\obj\x86\Debug\Bonovi.frmPregledBonova.resources
+H:\Bonovi\Bonovi\obj\x86\Debug\Bonovi.frmPrenesiStare.resources
+H:\Bonovi\Bonovi\obj\x86\Debug\Bonovi.frmPrijenosIFA.resources
+H:\Bonovi\Bonovi\obj\x86\Debug\Bonovi.Properties.Resources.resources
+H:\Bonovi\Bonovi\obj\x86\Debug\Bonovi.csproj.GenerateResource.Cache
+H:\Bonovi\Bonovi\obj\x86\Debug\Bonovi.exe.licenses
+H:\Bonovi\Bonovi\obj\x86\Debug\Bonovi.exe
+H:\Bonovi\Bonovi\obj\x86\Debug\Bonovi.pdb
+H:\Bonovi\Bonovi\obj\x86\Debug\Bonovi.frmPreuzmiArhivu.resources

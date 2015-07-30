@@ -1,0 +1,4 @@
+/*putanja prazne tablice BI*/
+V:\PRIJENOS\Prazno\
+/*putanja tablica s podacima za brisanje BI i BB*/
+V:\PRIJENOS\BOSO\

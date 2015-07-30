@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report ScriptLanguage="CSharp" ReportInfo.Created="05/29/2012 12:52:57" ReportInfo.Modified="12/23/2014 13:02:01" ReportInfo.CreatorVersion="1.4.19.0">
+  <Dictionary>
+    <TableDataSource Name="Artikli" ReferenceName="Data.Artikli" DataType="System.Int32" Enabled="true">
+      <Column Name="bon_kod" DataType="System.String"/>
+      <Column Name="PA_NAZIV" DataType="System.String"/>
+      <Column Name="bon_rednibroj" DataType="System.Int32"/>
+      <Column Name="bon_datumizrade" DataType="System.DateTime"/>
+      <Column Name="bon_iznos" DataType="System.Double"/>
+      <Column Name="bon_datumkoristenja" DataType="System.DateTime"/>
+      <Column Name="bon_iznosracuna" DataType="System.Double"/>
+      <Column Name="ifab_ID" DataType="System.Int32"/>
+      <Column Name="bon_ponisten" DataType="System.Boolean" BindableControl="CheckBox"/>
+      <Column Name="po_naziv" DataType="System.String"/>
+      <Column Name="iskoristeno" DataType="System.Double"/>
+      <Column Name="concat(operater_op_ime,' ',operater_op_prezime)" DataType="System.String"/>
+      <Column Name="bon_id" DataType="System.Int32"/>
+      <Column Name="bon_napomena" DataType="System.String"/>
+    </TableDataSource>
+    <Parameter Name="partner" DataType="System.String"/>
+    <Parameter Name="naslov" DataType="System.String"/>
+    <Parameter Name="iskoristeno" DataType="System.String"/>
+    <Total Name="ukupno" Expression="[Artikli.bon_iznos]" Evaluator="Data1"/>
+  </Dictionary>
+  <ReportPage Name="Page1">
+    <ReportTitleBand Name="ReportTitle1" Width="718.2" Height="189">
+      <TextObject Name="Text1" Left="28.35" Top="18.9" Width="217.35" Height="47.25" Text="BOSO D.O.O. VINKOVCI&#13;&#10;H.D.Genscher 22d&#13;&#10;tel: 341 - 241;  fax:  341 - 255"/>
+      <TextObject Name="Text2" Left="538.65" Top="9.45" Width="245.7" Height="18.9" Text="Ispisano: [Date]"/>
+      <TextObject Name="Text3" Left="160.65" Top="94.5" Width="406.35" Height="18.9" Text="[naslov]" HorzAlign="Center" Font="Arial, 10pt, style=Bold"/>
+      <TextObject Name="Text15" Left="160.65" Top="122.85" Width="406.35" Height="18.9" Text="[partner]" HorzAlign="Center" Font="Arial, 10pt, style=Bold"/>
+    </ReportTitleBand>
+    <PageHeaderBand Name="PageHeader1" Top="193" Width="718.2" Height="28.35" Border.Lines="Bottom" Fill.Color="Gainsboro">
+      <TextObject Name="Text4" Left="15.45" Top="5.55" Width="66.15" Height="18.9" Text="Rbr."/>
+      <TextObject Name="Text5" Left="82.45" Top="5.55" Width="122.85" Height="18.9" Text="Šifra bona&#13;&#10;"/>
+      <TextObject Name="Text6" Left="205.8" Top="5.55" Width="141.75" Height="18.9" Text="Datum izdavanja"/>
+      <TextObject Name="Text7" Left="460.55" Top="5.55" Width="132.3" Height="18.9" Text="Datum korištenja&#13;&#10;"/>
+      <TextObject Name="Text8" Left="347.75" Top="5.55" Width="113.4" Height="18.9" Text="Iznos bona"/>
+      <TextObject Name="Text19" Left="593.35" Top="6" Width="94.5" Height="18.9" Text="Iznos računa"/>
+    </PageHeaderBand>
+    <DataBand Name="Data1" Top="225.35" Width="718.2" Height="19.9" DataSource="Artikli">
+      <TextObject Name="Text9" Left="15.9" Top="0.9" Width="66.5" Height="18.9" Text="[Row#]."/>
+      <TextObject Name="Text10" Left="82.95" Top="0.9" Width="124.5" Height="18.9" Text="[Artikli.bon_kod]"/>
+      <TextObject Name="Text11" Left="206.35" Top="1" Width="142.5" Height="18.9" Text="[Artikli.bon_datumizrade]" HideZeros="true" Format="Date" Format.Format="d"/>
+      <TextObject Name="Text12" Left="461.5" Top="1" Width="130.5" Height="18.9" Text="[Artikli.bon_datumkoristenja]" HideZeros="true" Format="Date" Format.Format="d"/>
+      <TextObject Name="Text13" Left="347.65" Top="1" Width="114.5" Height="18.9" Text="[Artikli.bon_iznos]" Format="Currency" Format.UseLocale="true" WordWrap="false" Trimming="EllipsisCharacter"/>
+      <TextObject Name="Text18" Left="593.35" Top="1" Width="94.5" Height="18.9" Text="[Artikli.bon_iznosracuna]" Format="Currency" Format.UseLocale="true"/>
+      <DataFooterBand Name="DataFooter1" Top="249.25" Width="718.2" Height="75.6" Border.Lines="Top">
+        <TextObject Name="Text17" Left="241.25" Top="9.45" Width="444.15" Height="18.9" Border.Lines="Bottom" Border.BottomLine.Style="Dot" Text="Ukupno izdano:  [ukupno]" Format="Currency" Format.UseLocale="true"/>
+        <TextObject Name="Text16" Left="236.8" Top="36.8" Width="453.6" Height="18.9" Border.Lines="Bottom" Border.BottomLine.Style="Dot" Text="[IIf([iskoristeno] == null,&quot;Ukupno iskorišteno: 0,00 kn&quot;, &quot;Ukupno za naplatu: &quot; + [iskoristeno] + &quot; kn&quot;)]" HorzAlign="Right"/>
+      </DataFooterBand>
+    </DataBand>
+    <PageFooterBand Name="PageFooter1" Top="328.85" Width="718.2" Height="37.8">
+      <TextObject Name="Text14" Left="604.8" Top="9.45" Width="94.5" Height="18.9" Text="[PageN]"/>
+    </PageFooterBand>
+  </ReportPage>
+</Report>

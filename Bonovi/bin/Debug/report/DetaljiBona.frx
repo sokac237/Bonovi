@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report ScriptLanguage="CSharp" ReportInfo.Created="05/04/2012 13:51:23" ReportInfo.Modified="12/30/2014 13:12:40" ReportInfo.CreatorVersion="1.4.19.0">
+  <Dictionary>
+    <TableDataSource Name="Artikli" ReferenceName="Data.Artikli" DataType="System.Int32" Enabled="true">
+      <Column Name="bon_kod" DataType="System.String"/>
+      <Column Name="PA_NAZIV" DataType="System.String"/>
+      <Column Name="bon_rednibroj" DataType="System.Int32"/>
+      <Column Name="bon_datumizrade" DataType="System.DateTime"/>
+      <Column Name="bon_iznos" DataType="System.Double"/>
+      <Column Name="bon_datumkoristenja" DataType="System.DateTime"/>
+      <Column Name="bon_iznosracuna" DataType="System.Double"/>
+      <Column Name="ifab_ID" DataType="System.Int32"/>
+      <Column Name="bon_ponisten" DataType="System.Boolean" BindableControl="CheckBox"/>
+      <Column Name="po_naziv" DataType="System.String"/>
+      <Column Name="concat(operater.op_ime,'',operater.op_prezime)" DataType="System.String"/>
+      <Column Name="bon_kasa" DataType="System.String"/>
+      <Column Name="bon_vazido" DataType="System.DateTime"/>
+      <Column Name="bon_racunnakasi" DataType="System.String"/>
+      <Column Name="ifab_datum" DataType="System.DateTime"/>
+    </TableDataSource>
+  </Dictionary>
+  <ReportPage Name="Page1" RawPaperSize="9" FirstPageSource="15" OtherPagesSource="15">
+    <ReportTitleBand Name="ReportTitle1" Width="718.2" Height="175.2">
+      <TextObject Name="Text1" Left="18.9" Top="37.8" Width="217.35" Height="47.25" Text="BOSO D.O.O. VINKOVCI&#13;&#10;H.D.Genscher 22d&#13;&#10;tel: 341 - 241;  fax:  341 - 255"/>
+      <TextObject Name="Text2" Left="529.2" Top="18.9" Width="245.7" Height="18.9" Text="Ispisano: [Date]"/>
+      <TextObject Name="Text3" Left="151.2" Top="113.4" Width="406.35" Height="18.9" Text="DETALJI BONA BROJ: [Artikli.bon_rednibroj]" HorzAlign="Center" Font="Arial, 10pt, style=Bold"/>
+    </ReportTitleBand>
+    <PageHeaderBand Name="PageHeader1" Top="179.2" Width="718.2" Height="214.45" Border.Lines="Top, Bottom" Border.TopLine.Style="Dash" Border.BottomLine.Style="Dash">
+      <TextObject Name="Text4" Left="113.4" Top="11.45" Width="94.5" Height="18.9" Text="Šifra bona :" HorzAlign="Right" VertAlign="Bottom"/>
+      <TextObject Name="Text7" Left="115.25" Top="113.95" Width="94.5" Height="18.9" Text="Redni broj :" HorzAlign="Right" VertAlign="Bottom"/>
+      <TextObject Name="Text8" Left="113.75" Top="147.75" Width="94.5" Height="18.9" Text="Iznos :&#13;&#10;" HorzAlign="Right" VertAlign="Bottom"/>
+      <TextObject Name="Text6" Left="38.15" Top="79.15" Width="170.1" Height="15.9" Text="Datum izdavanja :" HorzAlign="Right" VertAlign="Bottom"/>
+      <TextObject Name="Text5" Left="86.55" Top="47.25" Width="123.2" Height="15.9" Text="Izdano partneru :&#13;&#10;" HorzAlign="Right" VertAlign="Bottom"/>
+      <TextObject Name="Text17" Left="113.4" Top="182.45" Width="94.5" Height="18.9" Text="Važi do :" HorzAlign="Right" VertAlign="Bottom"/>
+      <TextObject Name="Text12" Left="235.35" Top="11.6" Width="415.5" Height="18.9" Text="[Artikli.bon_kod]" VertAlign="Bottom"/>
+      <TextObject Name="Text13" Left="237.15" Top="46.25" Width="654.5" Height="18.9" Text="[Artikli.PA_NAZIV]" VertAlign="Bottom"/>
+      <TextObject Name="Text14" Left="237.15" Top="76.05" Width="652.5" Height="18.9" Text="[Artikli.bon_datumizrade]" HideZeros="true" Format="Date" Format.Format="d" VertAlign="Bottom"/>
+      <TextObject Name="Text15" Left="238.05" Top="113.85" Width="653.5" Height="18.9" Text="[Artikli.bon_rednibroj]" VertAlign="Bottom"/>
+      <TextObject Name="Text16" Left="238.45" Top="148.7" Width="217.35" Height="18.9" Text="[Artikli.bon_iznos]" Format="Currency" Format.UseLocale="true" VertAlign="Bottom" WordWrap="false" Trimming="EllipsisCharacter"/>
+      <TextObject Name="Text9" Left="237.25" Top="182" Width="217.35" Height="18.9" Text="[Artikli.bon_vazido]" HideZeros="true" Format="Date" Format.Format="d" VertAlign="Bottom"/>
+      <ChildBand Name="Child1" Top="397.65" Width="718.2" Height="236.25" Border.Lines="Bottom" Border.BottomLine.Style="Dash">
+        <TextObject Name="Text18" Left="113.4" Top="94.5" Width="94.5" Height="18.9" Text="Broj računa :" HorzAlign="Right"/>
+        <TextObject Name="Text19" Left="113.4" Top="132.3" Width="94.5" Height="18.9" Text="Kasa :" HorzAlign="Right"/>
+        <TextObject Name="Text11" Left="113.4" Top="56.7" Width="94.5" Height="18.9" Text="U poslovnici :" HorzAlign="Right"/>
+        <TextObject Name="Text10" Left="94.5" Top="18.9" Width="113.4" Height="18.9" Text="Bon iskorišten :" HorzAlign="Right"/>
+        <TextObject Name="Text22" Left="236.25" Top="18.9" Width="217.35" Height="18.9" Text="[Artikli.bon_datumkoristenja]" HideZeros="true" Format="Date" Format.Format="d" VertAlign="Bottom"/>
+        <TextObject Name="Text23" Left="236.25" Top="56.7" Width="453.6" Height="18.9" Text="[Artikli.po_naziv]"/>
+        <TextObject Name="Text24" Left="236.25" Top="132.3" Width="217.35" Height="18.9" Text="[Artikli.bon_kasa]"/>
+        <TextObject Name="Text25" Left="236.25" Top="94.5" Width="217.35" Height="18.9" Text="[Artikli.bon_racunnakasi]"/>
+        <TextObject Name="Text20" Left="56.7" Top="170.1" Width="151.2" Height="18.9" Text="Iznos računa :" HorzAlign="Right"/>
+        <TextObject Name="Text26" Left="236.25" Top="170.1" Width="217.35" Height="18.9" Text="[Artikli.bon_iznosracuna]" HideZeros="true" Format="Currency" Format.UseLocale="true" WordWrap="false" Trimming="EllipsisCharacter"/>
+        <TextObject Name="Text21" Left="113.4" Top="207.9" Width="94.5" Height="18.9" Text="Osoba :" HorzAlign="Right"/>
+        <TextObject Name="Text32" Left="236.25" Top="207.9" Width="425.25" Height="18.9" Text="[Artikli.concat(operater.op_ime,'',operater.op_prezime)]"/>
+      </ChildBand>
+    </PageHeaderBand>
+    <ReportSummaryBand Name="ReportSummary1" Top="637.9" Width="718.2" Height="65.15">
+      <TextObject Name="Text28" Left="37.8" Top="9.45" Width="170.1" Height="18.9" Text="Bon fakturiran:" HorzAlign="Right"/>
+      <TextObject Name="Text29" Left="113.4" Top="37.8" Width="94.5" Height="18.9" Text="Faktura broj:" HorzAlign="Right"/>
+      <TextObject Name="Text30" Left="236.25" Top="9.45" Width="217.35" Height="18.9" Text="[Artikli.ifab_datum]" HideZeros="true" Format="Date" Format.Format="d"/>
+      <TextObject Name="Text31" Left="236.25" Top="37.8" Width="217.35" Height="18.9" Text="[Artikli.ifab_ID]" HideZeros="true"/>
+    </ReportSummaryBand>
+    <PageFooterBand Name="PageFooter1" Top="707.05" Width="718.2" Height="18.9">
+      <TextObject Name="Text27" Left="623.7" Width="94.5" Height="18.9" Text="[PageN]"/>
+    </PageFooterBand>
+  </ReportPage>
+</Report>

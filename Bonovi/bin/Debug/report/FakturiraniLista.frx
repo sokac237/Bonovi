@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report ScriptLanguage="CSharp" ReportInfo.Created="05/29/2012 12:52:57" ReportInfo.Modified="12/23/2014 13:00:04" ReportInfo.CreatorVersion="1.4.19.0">
+  <Dictionary>
+    <TableDataSource Name="Artikli" ReferenceName="Data.Artikli" DataType="System.Int32" Enabled="true">
+      <Column Name="PA_NAZIV" DataType="System.String"/>
+      <Column Name="ifab_ID" DataType="System.Int32"/>
+      <Column Name="concat(operater_op_ime,' ',operater_op_prezime)" DataType="System.String"/>
+      <Column Name="bon_kod" DataType="System.String"/>
+      <Column Name="bon_rednibroj" DataType="System.Int32"/>
+      <Column Name="bon_datumizrade" DataType="System.DateTime"/>
+      <Column Name="bon_datumkoristenja" DataType="System.DateTime"/>
+      <Column Name="bon_ponisten" DataType="System.Boolean" BindableControl="CheckBox"/>
+      <Column Name="bon_iznos" DataType="System.Decimal"/>
+      <Column Name="bon_iznosracuna" DataType="System.Decimal"/>
+      <Column Name="po_naziv" DataType="System.String"/>
+      <Column Name="iskoristeno" DataType="System.Decimal"/>
+      <Column Name="bon_id" DataType="System.Int32"/>
+      <Column Name="bon_napomena" DataType="System.String"/>
+    </TableDataSource>
+    <Parameter Name="datumOD" DataType="System.String"/>
+    <Parameter Name="datumDO" DataType="System.String"/>
+    <Total Name="ukupno" Expression="[Artikli.ifab_ukupno]" Evaluator="Data1" PrintOn="DataFooter1"/>
+  </Dictionary>
+  <ReportPage Name="Page1">
+    <ReportTitleBand Name="ReportTitle1" Width="718.2" Height="160.65">
+      <TextObject Name="Text1" Left="28.35" Top="18.9" Width="217.35" Height="47.25" Text="BOSO D.O.O. VINKOVCI&#13;&#10;H.D.Genscher 22d&#13;&#10;tel: 341 - 241;  fax:  341 - 255"/>
+      <TextObject Name="Text2" Left="538.65" Top="9.45" Width="245.7" Height="18.9" Text="Ispisano: [Date]"/>
+      <TextObject Name="Text3" Left="160.65" Top="94.5" Width="406.35" Height="18.9" Text="PREGLED FAKTURIRANIH BONOVA" HorzAlign="Center" Font="Arial, 10pt, style=Bold"/>
+      <TextObject Name="Text20" Left="207.9" Top="132.3" Width="302.4" Height="16.9" Text="Za razdoblje od: [ToDateTime([datumOD])]  do: [ToDateTime([datumDO])] " HorzAlign="Center" Font="Arial, 10pt, style=Bold">
+        <Formats>
+          <DateFormat/>
+          <GeneralFormat/>
+        </Formats>
+      </TextObject>
+    </ReportTitleBand>
+    <PageHeaderBand Name="PageHeader1" Top="164.65" Width="718.2" Height="33.45" Border.Lines="Bottom" Fill.Color="Gainsboro">
+      <TextObject Name="Text4" Left="6" Top="5.55" Width="66.15" Height="18.9" Text="Rbr."/>
+      <TextObject Name="Text5" Left="73" Top="1.55" Width="66.15" Height="31.9" Text="Šifra partnera&#13;&#10;"/>
+      <TextObject Name="Text8" Left="480.05" Top="5.55" Width="113.4" Height="18.9" Text="Iznos"/>
+      <TextObject Name="Text18" Left="383" Top="7" Width="96.5" Height="18.9" Text="Faktura"/>
+      <TextObject Name="Text19" Left="594" Top="5.55" Width="113.4" Height="18.9" Text="Iznos"/>
+      <TextObject Name="Text11" Left="141.1" Top="6" Width="223.85" Height="18.9" Text="Partner"/>
+    </PageHeaderBand>
+    <GroupHeaderBand Name="GroupHeader1" Top="202.1" Width="718.2" Height="37.8" Condition="[Artikli.PA_NAZIV]" SortOrder="None">
+      <TextObject Name="Text15" Left="9.45" Top="9.45" Width="406.35" Height="18.9" Border.Lines="Bottom" Border.BottomLine.Style="Double" Text="[Artikli.PA_NAZIV]" HorzAlign="Center" Font="Arial, 10pt, style=Bold"/>
+      <DataBand Name="Data1" Top="243.9" Width="718.2" Height="20.9" CanGrow="true" CanShrink="true" DataSource="Artikli">
+        <TextObject Name="Text9" Left="6.45" Top="0.9" Width="66.5" Height="18.9" Text="[Row#]."/>
+        <TextObject Name="Text10" Left="73.5" Top="0.9" Width="66.15" Height="18.9" Text="[Artikli.PA_SIFRA]"/>
+        <TextObject Name="Text13" Left="478.05" Top="2" Width="114.5" Height="18.9" Text="[Artikli.ifab_ukupno]" Format="Currency" Format.UseLocale="true" WordWrap="false" Trimming="EllipsisCharacter"/>
+        <TextObject Name="Text16" Left="384" Top="2" Width="94.5" Height="18.9" Text="[Artikli.ifab_ID]"/>
+        <TextObject Name="Text6" Left="592.8" Top="2" Width="114.5" Height="18.9" Text="[Artikli.ifab_datum]" HideZeros="true" Format="Date" Format.Format="d"/>
+        <TextObject Name="Text7" Left="139.55" Top="1" Width="243.4" Height="18.9" CanGrow="true" CanShrink="true" GrowToBottom="true" Text="[Artikli.PA_NAZIV]" Font="Arial, 9pt"/>
+        <DataFooterBand Name="DataFooter1" Top="268.8" Width="718.2" Height="37.8" Border.Lines="Top">
+          <TextObject Name="Text17" Left="401.9" Top="9.45" Width="302.4" Height="18.9" Text="Ukupno:  [ukupno]" Format="Currency" Format.UseLocale="true"/>
+        </DataFooterBand>
+      </DataBand>
+    </GroupHeaderBand>
+    <PageFooterBand Name="PageFooter1" Top="310.6" Width="718.2" Height="37.8">
+      <TextObject Name="Text14" Left="604.8" Top="9.45" Width="94.5" Height="18.9" Text="[PageN]"/>
+    </PageFooterBand>
+  </ReportPage>
+</Report>

@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report ScriptLanguage="CSharp" ReportInfo.Created="11/08/2013 12:26:52" ReportInfo.Modified="12/23/2014 12:58:24" ReportInfo.CreatorVersion="1.4.19.0">
+  <Dictionary>
+    <TableDataSource Name="Bonovi" ReferenceName="Data.Bonovi" DataType="System.Int32" Enabled="true">
+      <Column Name="bon_ID" DataType="System.Int32"/>
+      <Column Name="bon_kod" DataType="System.String"/>
+      <Column Name="bon_datumkoristenja" DataType="System.DateTime"/>
+      <Column Name="PA_SIFRA" DataType="System.String"/>
+      <Column Name="PA_NAZIV" DataType="System.String"/>
+      <Column Name="po_sifra" DataType="System.String"/>
+      <Column Name="po_naziv" DataType="System.String"/>
+      <Column Name="bon_iznosracuna" DataType="System.Decimal"/>
+      <Column Name="bon_datumbrojanja" DataType="System.DateTime"/>
+      <Column Name="bon_datumizrade" DataType="System.DateTime"/>
+      <Column Name="bon_iznos" DataType="System.Decimal"/>
+      <Column Name="iznos" DataType="System.Decimal"/>
+    </TableDataSource>
+    <Parameter Name="datumOD" DataType="System.String"/>
+    <Parameter Name="datumDO" DataType="System.String"/>
+    <Parameter Name="brojanje" DataType="System.String"/>
+    <Total Name="sumIznosBona" Expression="[Bonovi.bon_iznos]" Evaluator="Data1" PrintOn="GroupFooter1"/>
+    <Total Name="sumBonIznosRacuna" Expression="[Bonovi.bon_iznosracuna]" Evaluator="Data1" PrintOn="GroupFooter1"/>
+    <Total Name="Ukupno iznos" Expression="[Bonovi.bon_iznos]" Evaluator="Data1" PrintOn="ReportSummary1"/>
+    <Total Name="Ukupno racun" Expression="[Bonovi.bon_iznosracuna]" Evaluator="Data1" PrintOn="ReportSummary1"/>
+  </Dictionary>
+  <ReportPage Name="Page1">
+    <ReportTitleBand Name="ReportTitle1" Width="718.2" Height="179.55">
+      <TextObject Name="Text1" Left="9.45" Top="18.9" Width="141.75" Height="75.6" Text="Boso d.o.o&#13;&#10;H.D.Genschera 22 b&#13;&#10;32100 Vinkovci&#13;&#10;tel. 341-241" Font="Arial, 10pt, style=Bold"/>
+      <TextObject Name="Text8" Left="491.4" Top="9.45" Width="217.35" Height="18.9" Text="Izrađeno:[Date]"/>
+      <TextObject Name="Text2" Left="113.4" Top="94.5" Width="434.7" Height="56.7" Text="PREGLED ISKORIŠTENIH BONOVA U RAZDOBLJU&#13;&#10;OD [datumOD] DO [datumDO]&#13;&#10;Datum brojanja: [brojanje]&#13;&#10;&#13;&#10;">
+        <Formats>
+          <DateFormat/>
+          <GeneralFormat/>
+          <GeneralFormat/>
+        </Formats>
+      </TextObject>
+    </ReportTitleBand>
+    <PageHeaderBand Name="PageHeader1" Top="183.55" Width="718.2" Height="35.8" Fill.Color="LightGray">
+      <TextObject Name="Text5" Left="-1" Top="14.45" Width="47.25" Height="18.9" Text="R.br."/>
+      <TextObject Name="Text21" Left="46.25" Top="14" Width="103.95" Height="18.9" Text="Broj potvrde" HorzAlign="Center"/>
+      <TextObject Name="Text22" Left="151.2" Width="103.95" Height="32.35" Text="Datum izdavanja" HorzAlign="Center" VertAlign="Bottom"/>
+      <LineObject Name="Line1" Top="35.8" Width="718.2"/>
+      <TextObject Name="Text23" Left="255.15" Width="103.95" Height="32.35" Text="Datum korištenja&#13;&#10;" HorzAlign="Center"/>
+      <TextObject Name="Text24" Left="359.9" Top="14" Width="103.95" Height="18.9" Text="Iznos bona" HorzAlign="Center"/>
+      <TextObject Name="Text25" Left="464.8" Top="14" Width="85.05" Height="18.9" Text="Za naplatu" HorzAlign="Center"/>
+      <TextObject Name="Text26" Left="550.8" Top="14" Width="160.65" Height="18.9" Text="Poslovnica" HorzAlign="Center"/>
+    </PageHeaderBand>
+    <GroupHeaderBand Name="GroupHeader1" Top="223.35" Width="718.2" Height="30.8" Condition="[Bonovi.PA_SIFRA]" SortOrder="None">
+      <TextObject Name="Text20" Left="-2.45" Top="6.45" Width="47.25" Height="18.9" Fill.Color="WhiteSmoke" Text="[AbsRow#]." Font="Arial, 9pt"/>
+      <TextObject Name="Text3" Left="45.8" Top="6.45" Width="642.6" Height="18.9" Fill.Color="WhiteSmoke" Text="[Bonovi.PA_SIFRA]  [Bonovi.PA_NAZIV]"/>
+      <LineObject Name="Line2" Top="26.35" Width="444.15"/>
+      <DataBand Name="Data1" Top="258.15" Width="718.2" Height="28.25" DataSource="Bonovi">
+        <TextObject Name="Text4" Left="47.25" Top="1" Width="103.95" Height="18.9" Text="[Bonovi.bon_kod]" Font="Arial, 9pt"/>
+        <TextObject Name="Text6" Top="1" Width="47.25" Height="18.9" Text="[Row#]." Font="Arial, 9pt"/>
+        <TextObject Name="Text9" Left="155.75" Top="1" Width="94.5" Height="18.9" Text="[Bonovi.bon_datumizrade]" Format="Date" Format.Format="d" Font="Arial, 9pt"/>
+        <TextObject Name="Text10" Left="259.6" Width="94.5" Height="18.9" Text="[Bonovi.bon_datumkoristenja]" Format="Date" Format.Format="d" Font="Arial, 9pt"/>
+        <TextObject Name="Text11" Left="359" Width="94.5" Height="18.9" Text="[Bonovi.bon_iznos]" Format="Currency" Format.UseLocale="true" WordWrap="false" Font="Arial, 9pt" Trimming="EllipsisCharacter"/>
+        <TextObject Name="Text12" Left="453.5" Width="94.5" Height="18.9" Text="[Bonovi.bon_iznosracuna]" Format="Currency" Format.UseLocale="true" WordWrap="false" Font="Arial, 9pt" Trimming="EllipsisCharacter"/>
+        <TextObject Name="Text13" Left="553.55" Width="164.5" Height="18.9" Text="[Bonovi.po_naziv]" Font="Arial, 9pt"/>
+      </DataBand>
+      <GroupFooterBand Name="GroupFooter1" Top="290.4" Width="718.2" Height="25.8" Border.Lines="Top" Border.TopLine.Style="Dash">
+        <TextObject Name="Text7" Left="3" Top="3.05" Width="94.5" Height="18.9" Text="UKUPNO:&#13;&#10;" Font="Arial, 9pt"/>
+        <TextObject Name="Text14" Left="359.1" Width="94.5" Height="18.9" Text="[sumIznosBona]" Format="Currency" Format.UseLocale="true"/>
+        <TextObject Name="Text15" Left="453.6" Width="94.5" Height="18.9" Text="[sumBonIznosRacuna]" Format="Currency" Format.UseLocale="true"/>
+      </GroupFooterBand>
+    </GroupHeaderBand>
+    <ReportSummaryBand Name="ReportSummary1" Top="320.2" Width="718.2" Height="37.8">
+      <TextObject Name="Text16" Left="359.1" Top="9.45" Width="94.5" Height="18.9" Text="[Ukupno iznos]" Format="Currency" Format.UseLocale="true" HorzAlign="Right" Font="Arial, 10pt, style=Bold"/>
+      <TextObject Name="Text17" Left="151.2" Top="9.45" Width="198.45" Height="18.9" Text="UKUPNO SVE POSLOVNICE:&#13;&#10;" Font="Arial, 10pt, style=Bold"/>
+      <TextObject Name="Text18" Left="453.6" Top="9.45" Width="94.5" Height="18.9" Text="[Ukupno racun]" Format="Currency" Format.UseLocale="true" HorzAlign="Right" Font="Arial, 10pt, style=Bold"/>
+    </ReportSummaryBand>
+  </ReportPage>
+</Report>

@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report ScriptLanguage="CSharp" ReportInfo.Created="04/03/2012 12:18:13" ReportInfo.Modified="12/23/2014 13:01:19" ReportInfo.CreatorVersion="1.4.19.0" PrintSettings.Collate="false">
+  <Dictionary>
+    <TableDataSource Name="Artikli" ReferenceName="Data.Artikli" DataType="System.Int32" Enabled="true">
+      <Column Name="bkkod" Enabled="false" DataType="System.Int32" PropName="Column" Calculated="true" Expression=""/>
+      <Column Name="Column" DataType="System.Int32" Calculated="true" Expression="[barkod]"/>
+      <Column Name="bon_kod" DataType="System.String"/>
+      <Column Name="bon_ID" DataType="System.Int32"/>
+      <Column Name="bon_iznos" DataType="System.Double"/>
+      <Column Name="pa_naziv" DataType="System.String"/>
+      <Column Name="bon_rednibroj" DataType="System.Int32"/>
+      <Column Name="bon_datumizrade" DataType="System.DateTime"/>
+      <Column Name="bon_datumkoristenja" DataType="System.DateTime"/>
+      <Column Name="ifab_ID" DataType="System.Int32"/>
+      <Column Name="bon_ponisten" DataType="System.Boolean" BindableControl="CheckBox"/>
+      <Column Name="concat(operater_op_ime,' ',operater_op_prezime)" DataType="System.String"/>
+      <Column Name="bon_iznosracuna" DataType="System.Decimal"/>
+      <Column Name="po_naziv" DataType="System.String"/>
+      <Column Name="iskoristeno" DataType="System.Decimal"/>
+      <Column Name="bon_napomena" DataType="System.String"/>
+    </TableDataSource>
+    <Parameter Name="potvrdaBroj" DataType="System.String"/>
+    <Parameter Name="barkod" DataType="System.String"/>
+    <Parameter Name="brojbona" DataType="System.String"/>
+  </Dictionary>
+  <ReportPage Name="Page1" RawPaperSize="9">
+    <DataBand Name="Data2" Width="718.2" Height="1001.7" DataSource="Artikli">
+      <TableObject Name="Table1" Left="18.9" Top="9.45" Width="264.6" Height="94.5">
+        <TableColumn Name="Column1" Width="264.6"/>
+        <TableRow Name="Row1">
+          <TableCell Name="Cell1" Text="BOSO D.O.O. VINKOVCI" Font="Arial, 10pt, style=Bold"/>
+        </TableRow>
+        <TableRow Name="Row2">
+          <TableCell Name="Cell6" Text="H.D.Genscher 22d"/>
+        </TableRow>
+        <TableRow Name="Row3">
+          <TableCell Name="Cell11" Text="tel. 341 - 241  / fax. 341 - 255"/>
+        </TableRow>
+        <TableRow Name="Row4">
+          <TableCell Name="Cell16"/>
+        </TableRow>
+        <TableRow Name="Row5">
+          <TableCell Name="Cell21"/>
+        </TableRow>
+      </TableObject>
+      <BarcodeObject Name="Barcode1" Left="529.2" Top="47.25" Width="83.75" Height="94.5" DataColumn="Artikli.bon_kod" Text="0" Barcode="EAN8"/>
+      <TextObject Name="Text1" Left="481.95" Top="28.35" Width="179.55" Height="18.9" Text="ISPIŠI R - 1 RAČUN" HorzAlign="Center"/>
+      <TextObject Name="Text2" Left="28.35" Top="170.1" Width="652.05" Height="18.9" Text="Temeljem   ugovora   o   kupoprodaji   između   Boso   d.o.o.   kao   Prodavatelja   i     "/>
+      <TextObject Name="Text3" Left="47.25" Top="198.45" Width="623.7" Height="18.9" Text="[Artikli.pa_sifra]  [Artikli.pa_naziv]" Font="Arial, 12pt"/>
+      <TextObject Name="Text5" Left="47.25" Top="217.35" Width="623.7" Height="18.9" Text="OIB :    [Artikli.pa_OIB]" Font="Arial, 12pt"/>
+      <TextObject Name="Text6" Left="28.35" Top="236.25" Width="652.05" Height="18.9" Text="kao  Kupca,   izdaje   se   sljedeća  :"/>
+      <TextObject Name="Text4" Left="189" Top="302.4" Width="340.2" Height="18.9" Text="POTVRDA    BROJ   :   [brojbona]" HorzAlign="Center" Font="Arial, 14.25pt"/>
+      <TextObject Name="Text7" Left="28.35" Top="359.1" Width="652.05" Height="18.9" Text="Za  :  ________________________________________________________________"/>
+      <TextObject Name="Text8" Left="28.35" Top="406.35" Width="652.05" Height="18.9" Text="iz   :  ________________________________________________________________"/>
+      <TextObject Name="Text9" Left="207.9" Top="378" Width="207.9" Height="18.9" Text="( Ime   i   prezime ,  JMBG )"/>
+      <TextObject Name="Text10" Left="213.9" Top="425.25" Width="198.45" Height="18.9" Text="( Mjesto ,   ulica   i   broj )"/>
+      <TextObject Name="Text11" Left="28.35" Top="453.6" Width="652.05" Height="47.25" Text="Nositelj   potvrde   uz   predočenje   osobne   iskaznice   i   Boso   shopping   card , na   blagajni   u   poslovnoj   jedinici   ( trgovini )   Prodavatelja , može   preuzeti   robu   iz   cjelokupnog   asortimana   izdavatelja   potvrde   u   iznosu   :" HorzAlign="Justify"/>
+      <TextObject Name="Text12" Left="274.05" Top="538.65" Width="189" Height="18.9" Text="[Artikli.bon_iznos]" Format="Currency" Format.UseLocale="true" HorzAlign="Center" Font="Arial, 14.25pt, style=Bold"/>
+      <TextObject Name="Text13" Left="28.35" Top="585.9" Width="330.75" Height="18.9" Text="OVA   POTVRDA   SE   MOŽE   ISKORISTITI   DO  :" HorzAlign="Justify" Font="Arial, 9.75pt"/>
+      <TextObject Name="Text15" Left="28.35" Top="614.25" Width="652.05" Height="18.9" Text="Realizacija   kupljene   robe   u   iznosu  :  _____________ ,   dana  ____________________________ ," HorzAlign="Justify"/>
+      <TextObject Name="Text16" Left="28.35" Top="642.6" Width="652.05" Height="18.9" Text="po   računu   broj   _______________ ,  u poslovnoj   jedinici   __________________________________" HorzAlign="Justify"/>
+      <TextObject Name="Text17" Left="28.35" Top="680.4" Width="652.05" Height="18.9" Text="ROBU   MOŽETE   PODIĆI   SAMO   UZ   PREDOČENJE   ORIGINALA   I   KOPIJE   ! ! !" HorzAlign="Justify"/>
+      <TextObject Name="Text18" Left="18.9" Top="803.25" Width="151.2" Height="18.9" Text="ZA   PRODAVATELJA"/>
+      <TextObject Name="Text19" Left="18.9" Top="822.15" Width="151.2" Height="18.9" Text="direktor:" HorzAlign="Center"/>
+      <TextObject Name="Text20" Left="18.9" Top="850.5" Width="226.8" Height="18.9" Text="__________________________"/>
+      <TextObject Name="Text21" Left="18.9" Top="869.4" Width="189" Height="18.9" Text="Bosiljko   Stanić ,  ing." HorzAlign="Center" Font="Arial, 10pt, style=Italic"/>
+      <TextObject Name="Text22" Left="519.75" Top="803.25" Width="151.2" Height="18.9" Text="ZA   KUPCA" HorzAlign="Right"/>
+      <TextObject Name="Text24" Left="481.95" Top="850.5" Width="226.8" Height="18.9" Text="__________________________"/>
+      <TextObject Name="Text25" Left="444.15" Top="869.4" Width="264.6" Height="18.9" Text="( pečat  i  potpis  odgovorne  osobe )" HorzAlign="Center" Font="Arial, 10pt, style=Italic"/>
+      <TextObject Name="Text26" Left="226.8" Top="916.65" Width="179.55" Height="18.9" Text="NOSITELJ  POTVRDE :" HorzAlign="Right"/>
+      <TextObject Name="Text28" Left="207.9" Top="935.55" Width="264.6" Height="18.9" Text="( uposlenik )" HorzAlign="Center" Font="Arial, 10pt, style=Italic"/>
+      <TextObject Name="Text27" Left="236.25" Top="954.45" Width="226.8" Height="18.9" Text="__________________________"/>
+      <TextObject Name="Text14" Left="652.05" Top="973.35" Width="56.7" Height="18.9" Text="Original" Font="Arial, 10pt, style=Italic"/>
+      <TextObject Name="Text23" Left="359.1" Top="585.9" Width="94.5" Height="18.9" Text="[Artikli.bon_vazido]" Format="Date" Format.Format="d"/>
+    </DataBand>
+  </ReportPage>
+  <ReportPage Name="Page2" RawPaperSize="9" Duplex="Vertical">
+    <DataBand Name="Data1" Width="718.2" Height="992.25" DataSource="Artikli">
+      <TableObject Name="Table2" Left="18.9" Top="9.45" Width="264.6" Height="94.5">
+        <TableColumn Name="Column2" Width="264.6"/>
+        <TableRow Name="Row6">
+          <TableCell Name="Cell22" Text="BOSO D.O.O. VINKOVCI" Font="Arial, 10pt, style=Bold"/>
+        </TableRow>
+        <TableRow Name="Row7">
+          <TableCell Name="Cell23" Text="H.D.Genscher 22d"/>
+        </TableRow>
+        <TableRow Name="Row8">
+          <TableCell Name="Cell24" Text="tel. 354 - 720  / fax. 354 - 727"/>
+        </TableRow>
+        <TableRow Name="Row9">
+          <TableCell Name="Cell25"/>
+        </TableRow>
+        <TableRow Name="Row10">
+          <TableCell Name="Cell26"/>
+        </TableRow>
+      </TableObject>
+      <TextObject Name="Text30" Left="18.9" Top="170.1" Width="652.05" Height="18.9" Text="Temeljem   ugovora   o   kupoprodaji   između   Boso   d.o.o.   kao   Prodavatelja   i     "/>
+      <TextObject Name="Text31" Left="37.8" Top="198.45" Width="623.7" Height="18.9" Text="[Artikli.pa_sifra]  [Artikli.pa_naziv]" Font="Arial, 12pt"/>
+      <TextObject Name="Text32" Left="37.8" Top="217.35" Width="623.7" Height="18.9" Text="OIB :    [Artikli.pa_OIB]" Font="Arial, 12pt"/>
+      <TextObject Name="Text33" Left="18.9" Top="236.25" Width="652.05" Height="18.9" Text="kao  Kupca,   izdaje   se   sljedeća  :"/>
+      <TextObject Name="Text34" Left="179.55" Top="302.4" Width="340.2" Height="18.9" Text="POTVRDA    BROJ   :   [brojbona]" HorzAlign="Center" Font="Arial, 14.25pt"/>
+      <TextObject Name="Text35" Left="28.35" Top="359.1" Width="652.05" Height="18.9" Text="Za  :  ________________________________________________________________"/>
+      <TextObject Name="Text36" Left="28.35" Top="406.35" Width="652.05" Height="18.9" Text="iz   :  ________________________________________________________________"/>
+      <TextObject Name="Text37" Left="207.9" Top="378" Width="207.9" Height="18.9" Text="( Ime   i   prezime ,  JMBG )"/>
+      <TextObject Name="Text38" Left="213.9" Top="425.25" Width="198.45" Height="18.9" Text="( Mjesto ,   ulica   i   broj )"/>
+      <TextObject Name="Text39" Left="28.35" Top="453.6" Width="652.05" Height="47.25" Text="Nositelj   potvrde   uz   predočenje   osobne   iskaznice   i   Boso   shopping   card , na   blagajni   u   poslovnoj   jedinici   ( trgovini )   Prodavatelja , može   preuzeti   robu   iz   cjelokupnog   asortimana   izdavatelja   potvrde   u   iznosu   :" HorzAlign="Justify"/>
+      <TextObject Name="Text40" Left="274.05" Top="538.65" Width="189" Height="18.9" Text="[Artikli.bon_iznos]" Format="Currency" Format.UseLocale="true" HorzAlign="Center" Font="Arial, 14.25pt, style=Bold"/>
+      <TextObject Name="Text41" Left="28.35" Top="585.9" Width="330.75" Height="18.9" Text="OVA   POTVRDA   SE   MOŽE   ISKORISTITI   DO  :" Font="Arial, 9.75pt"/>
+      <TextObject Name="Text42" Left="28.35" Top="614.25" Width="652.05" Height="18.9" Text="Realizacija   kupljene   robe   u   iznosu  :  _____________ ,   dana  ____________________________ ,"/>
+      <TextObject Name="Text43" Left="28.35" Top="642.6" Width="652.05" Height="18.9" Text="po   računu   broj   _______________ ,  u poslovnoj   jedinici   __________________________________"/>
+      <TextObject Name="Text44" Left="28.35" Top="680.4" Width="652.05" Height="18.9" Text="ROBU   MOŽETE   PODIĆI   SAMO   UZ   PREDOČENJE   ORIGINALA   I   KOPIJE   ! ! !"/>
+      <TextObject Name="Text45" Left="18.9" Top="803.25" Width="151.2" Height="18.9" Text="ZA   PRODAVATELJA"/>
+      <TextObject Name="Text46" Left="18.9" Top="822.15" Width="151.2" Height="18.9" Text="direktor:" HorzAlign="Center"/>
+      <TextObject Name="Text47" Left="18.9" Top="850.5" Width="226.8" Height="18.9" Text="__________________________"/>
+      <TextObject Name="Text48" Left="18.9" Top="869.4" Width="189" Height="18.9" Text="Bosiljko   Stanić ,  ing." HorzAlign="Center" Font="Arial, 10pt, style=Italic"/>
+      <TextObject Name="Text49" Left="519.75" Top="803.25" Width="151.2" Height="18.9" Text="ZA   KUPCA" HorzAlign="Right"/>
+      <TextObject Name="Text50" Left="481.95" Top="850.5" Width="226.8" Height="18.9" Text="__________________________"/>
+      <TextObject Name="Text51" Left="444.15" Top="869.4" Width="264.6" Height="18.9" Text="( pečat  i  potpis  odgovorne  osobe )" HorzAlign="Center" Font="Arial, 10pt, style=Italic"/>
+      <TextObject Name="Text52" Left="226.8" Top="916.65" Width="179.55" Height="18.9" Text="NOSITELJ  POTVRDE :" HorzAlign="Right"/>
+      <TextObject Name="Text53" Left="207.9" Top="935.55" Width="264.6" Height="18.9" Text="( uposlenik )" HorzAlign="Center" Font="Arial, 10pt, style=Italic"/>
+      <TextObject Name="Text54" Left="236.25" Top="954.45" Width="226.8" Height="18.9" Text="__________________________"/>
+      <TextObject Name="Text55" Left="652.05" Top="973.35" Width="56.7" Height="18.9" Text="Kopija" Font="Arial, 10pt, style=Italic"/>
+      <TextObject Name="Text56" Left="359.1" Top="585.9" Width="94.5" Height="18.9" Text="[Artikli.bon_vazido]" Format="Date" Format.Format="d"/>
+    </DataBand>
+  </ReportPage>
+</Report>
